@@ -2,23 +2,41 @@ package com.example.fragmenttask.Classes;
 
 public class AlbumData
 {
-    private String artistName,artistType,likeCounter,memberCounter,repostCounter,shareCounter,videoCounter;
+    private String artistName,artistType,artistAddress,likeCounter,memberCounter,repostCounter,shareCounter,videoCounter,viewCounter;
 
-    public AlbumData(String artistName, String artistType, String likeCounter, String memberCounter, String repostCounter, String shareCounter, String videoCounter) {
+    public AlbumData(String artistName, String artistType,String artistAddress, String likeCounter, String memberCounter, String repostCounter, String shareCounter, String videoCounter,String viewCounter) {
         this.artistName = artistName;
         this.artistType = artistType;
+        this.artistAddress=artistAddress;
         this.likeCounter = likeCounter;
         this.memberCounter = memberCounter;
         this.repostCounter = repostCounter;
         this.shareCounter = shareCounter;
         this.videoCounter = videoCounter;
+        this.viewCounter=viewCounter;
     }
 
     public AlbumData() {
     }
 
+    public String getViewCounter() {
+        return viewCounter;
+    }
+
+    public void setViewCounter(String viewCounter) {
+        this.viewCounter = viewCounter;
+    }
+
     public String getArtistName() {
         return artistName;
+    }
+
+    public String getArtistAddress() {
+        return artistAddress;
+    }
+
+    public void setArtistAddress(String artistAddress) {
+        this.artistAddress = artistAddress;
     }
 
     public void setArtistName(String artistName) {
