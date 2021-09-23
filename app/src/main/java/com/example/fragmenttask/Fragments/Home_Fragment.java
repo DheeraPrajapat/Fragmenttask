@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.fragmenttask.HomeTab.HomePageAdapter;
 import com.example.fragmenttask.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -28,6 +29,25 @@ public class Home_Fragment extends Fragment {
         homeTablayout.addTab(homeTablayout.newTab().setText("Home 3"));
         homeTablayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+        HomePageAdapter homePageAdapter=new HomePageAdapter(getFragmentManager(),homeTablayout.getTabCount());
+        homeViewPager.setAdapter(homePageAdapter);
+        homeViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(homeTablayout));
+        homeTablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                homeViewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         return view;
     }
