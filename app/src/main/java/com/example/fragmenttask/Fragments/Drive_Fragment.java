@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.fragmenttask.DriveTab.DrivePageAdapter;
 import com.example.fragmenttask.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -26,6 +27,28 @@ public class Drive_Fragment extends Fragment {
         driveTabLayout.addTab(driveTabLayout.newTab().setText("Drive1"));
         driveTabLayout.addTab(driveTabLayout.newTab().setText("Drive2"));
         driveTabLayout.addTab(driveTabLayout.newTab().setText("Drive3"));
+
+        DrivePageAdapter drivePageAdapter=new DrivePageAdapter(getFragmentManager(),driveTabLayout.getTabCount());
+        driveViewPager.setAdapter(drivePageAdapter);
+        driveViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(driveTabLayout));
+        driveTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                driveViewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+
         return view;
     }
 }
