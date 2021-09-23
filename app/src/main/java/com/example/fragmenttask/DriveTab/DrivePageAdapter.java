@@ -3,9 +3,10 @@ package com.example.fragmenttask.DriveTab;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-public class DrivePageAdapter extends FragmentStatePagerAdapter
+public class DrivePageAdapter extends FragmentPagerAdapter
 {
     int tabs;
 
@@ -31,6 +32,6 @@ public class DrivePageAdapter extends FragmentStatePagerAdapter
 
     @Override
     public int getCount() {
-        return 0;
+        return tabs;
     }
 }
