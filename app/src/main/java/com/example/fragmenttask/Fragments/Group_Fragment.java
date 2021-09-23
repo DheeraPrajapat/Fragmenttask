@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.fragmenttask.GroupTab.GroupPageAdapter;
 import com.example.fragmenttask.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -26,6 +27,26 @@ public class Group_Fragment extends Fragment {
         groupTablayout.addTab(groupTablayout.newTab().setText("Group1"));
         groupTablayout.addTab(groupTablayout.newTab().setText("Group2"));
         groupTablayout.addTab(groupTablayout.newTab().setText("Group3"));
+
+        GroupPageAdapter groupPageAdapter=new GroupPageAdapter(getFragmentManager(),groupTablayout.getTabCount());
+        groupViewPager.setAdapter(groupPageAdapter);
+        groupViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(groupTablayout));
+        groupTablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                groupViewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
 
         return view;
     }
