@@ -125,14 +125,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/streamImage"
+                    android:id="@+id/shareImage"
                     android:layout_marginStart="50dp"
-                    android:src="@drawable/like"/>
+                    android:src="@drawable/share"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:id="@+id/streamCounter"
+                    android:id="@+id/shareCounter"
                     android:textSize="15sp"
                     tools:ignore="HardcodedText" />
 
