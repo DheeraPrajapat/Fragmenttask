@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
+        android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="10dp">
 
@@ -20,12 +21,13 @@
                 android:id="@+id/userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:textSize="20dp"
-                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
                 android:text="Dheeraj Prajapat"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
 
@@ -41,26 +43,27 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/userImage"
                 android:layout_width="60dp"
-                android:layout_centerHorizontal="true"
                 android:layout_height="60dp"
                 android:layout_below="@id/userName"
-                 android:layout_marginStart="5dp"
-               android:layout_marginTop="15dp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/userName"
-                android:layout_marginStart="235dp"
+                android:layout_marginStart="80dp"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical">
 
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/userOccupation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/userAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -69,6 +72,7 @@
 
             <TextView
                 android:id="@+id/userViews"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/userImage"
@@ -101,6 +105,7 @@
                     android:layout_height="wrap_content"
                     android:text="1"
                     android:textSize="15sp"
+                    android:textColor="@color/black"
                     tools:ignore="HardcodedText" />
 
                 <ImageView
@@ -111,6 +116,7 @@
                     android:src="@drawable/group" />
 
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/groupCounter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -126,6 +132,7 @@
                     android:src="@drawable/repost" />
 
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/repostCounter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -142,6 +149,7 @@
 
                 <TextView
                     android:id="@+id/shareCounter"
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
@@ -156,6 +164,7 @@
                     android:src="@drawable/video" />
 
                 <TextView
+                    android:textColor="@color/black"
                     android:id="@+id/liveCounter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

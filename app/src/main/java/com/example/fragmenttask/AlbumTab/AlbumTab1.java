@@ -38,6 +38,10 @@ public class AlbumTab1 extends Fragment {
     private void setTheValueInArrayList() {
         albumData=new ArrayList<>();
         albumData.add(new AlbumData("Singaa","Punjabi","Chandigarh","344","242","433","34","78","432","https://i.pinimg.com/originals/9a/4e/3f/9a4e3f505f359a0d6e110ab4b822b67f.jpg"));
+        albumData.add(new AlbumData("Singaa","Punjabi","Chandigarh","344","242","433","34","78","432","https://i.pinimg.com/originals/9a/4e/3f/9a4e3f505f359a0d6e110ab4b822b67f.jpg"));
+        albumData.add(new AlbumData("Singaa","Punjabi","Chandigarh","344","242","433","34","78","432","https://i.pinimg.com/originals/9a/4e/3f/9a4e3f505f359a0d6e110ab4b822b67f.jpg"));
+        albumData.add(new AlbumData("Singaa","Punjabi","Chandigarh","344","242","433","34","78","432","https://i.pinimg.com/originals/9a/4e/3f/9a4e3f505f359a0d6e110ab4b822b67f.jpg"));
+        albumData.add(new AlbumData("Singaa","Punjabi","Chandigarh","344","242","433","34","78","432","https://i.pinimg.com/originals/9a/4e/3f/9a4e3f505f359a0d6e110ab4b822b67f.jpg"));
     }
 
 }
