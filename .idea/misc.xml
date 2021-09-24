@@ -5,6 +5,7 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.18958333333333333" />
         <entry key="app/src/main/res/drawable/bottomnavigation_shape.xml" value="0.14537037037037037" />
+        <entry key="app/src/main/res/drawable/button_shape.xml" value="0.1574074074074074" />
         <entry key="app/src/main/res/drawable/home.xml" value="0.17012987012987013" />
         <entry key="app/src/main/res/drawable/ic_round_close_24.xml" value="0.17012987012987013" />
         <entry key="app/src/main/res/drawable/ic_round_notifications_24.xml" value="0.14537037037037037" />
@@ -27,7 +28,8 @@
         <entry key="app/src/main/res/layout/fragment_home_tab2.xml" value="0.1721014492753623" />
         <entry key="app/src/main/res/layout/fragment_home_tab3.xml" value="0.1721014492753623" />
         <entry key="app/src/main/res/layout/recyclerViewItem.xml" value="0.12" />
-        <entry key="app/src/main/res/layout/recyclerview_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/recyclerview_item.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/repost_screen.xml" value="0.1587719298245614" />
         <entry key="app/src/main/res/layout/resume_layout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.1587719298245614" />

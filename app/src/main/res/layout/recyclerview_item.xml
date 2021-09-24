@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
-        android:layout_marginStart="10dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginEnd="10dp">
 
         <RelativeLayout
@@ -17,136 +17,149 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="5dp"
-                android:id="@+id/userName"
+                android:layout_marginTop="5dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
                 android:text="Dheeraj Prajapat"
                 tools:ignore="HardcodedText" />
 
 
             <ImageView
+                android:id="@+id/shareDataButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/share"
                 android:layout_alignParentEnd="true"
-                android:id="@+id/shareButton"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/share" />
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
                 android:id="@+id/userImage"
+                android:layout_width="60dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="60dp"
                 android:layout_below="@id/userName"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="15dp"/>
+                 android:layout_marginStart="5dp"
+               android:layout_marginTop="15dp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_below="@id/userName"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/userName"
+                android:layout_marginStart="235dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginStart="85dp"
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/userOccupation"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/userOccupation" />
+                    android:layout_height="wrap_content" />
 
                 <TextView
+                    android:id="@+id/userAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:id="@+id/userAddress"/>
+                    android:layout_marginTop="15dp" />
             </LinearLayout>
 
             <TextView
+                android:id="@+id/userViews"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/userViews"
                 android:layout_below="@id/userImage"
                 android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="20.5k Views"
                 tools:ignore="HardcodedText" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/userViews"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/likeImage"
-                    android:layout_marginStart="5dp"
-                    android:src="@drawable/like"/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
+                    android:src="@drawable/like" />
+
+                <TextView
                     android:id="@+id/likeCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
                     android:textSize="15sp"
                     tools:ignore="HardcodedText" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/groupImage"
-                    android:layout_marginStart="50dp"
-                    android:src="@drawable/group"/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
+                    android:layout_marginStart="35dp"
+                    android:src="@drawable/group" />
+
+                <TextView
                     android:id="@+id/groupCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
                     android:textSize="15sp"
                     tools:ignore="HardcodedText" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:id="@+id/repostImage"
-                    android:layout_marginStart="50dp"
-                    android:src="@drawable/repost"/>
-                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
-                    android:id="@+id/repostCounter"
-                    android:textSize="15sp"
-                    tools:ignore="HardcodedText"/>
+                    android:layout_marginStart="35dp"
+                    android:src="@drawable/repost" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/streamImage"
-                    android:layout_marginStart="50dp"
-                    android:src="@drawable/like"/>
                 <TextView
+                    android:id="@+id/repostCounter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:id="@+id/streamCounter"
                     android:textSize="15sp"
                     tools:ignore="HardcodedText" />
 
                 <ImageView
+                    android:id="@+id/shareImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/liveImage"
-                    android:layout_marginStart="50dp"
-                    android:src="@drawable/video"/>
+                    android:layout_marginStart="35dp"
+                    android:src="@drawable/share" />
+
                 <TextView
+                    android:id="@+id/shareCounter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/liveImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:src="@drawable/video" />
+
+                <TextView
                     android:id="@+id/liveCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
                     android:textSize="15sp"
                     tools:ignore="HardcodedText" />
 

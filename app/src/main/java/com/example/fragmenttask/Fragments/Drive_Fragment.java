@@ -24,9 +24,9 @@ public class Drive_Fragment extends Fragment {
         driveTabLayout=view.findViewById(R.id.tabLayout4);
         driveViewPager=view.findViewById(R.id.pager4);
 
-        driveTabLayout.addTab(driveTabLayout.newTab().setText("Drive1"));
-        driveTabLayout.addTab(driveTabLayout.newTab().setText("Drive2"));
-        driveTabLayout.addTab(driveTabLayout.newTab().setText("Drive3"));
+        driveTabLayout.addTab(driveTabLayout.newTab().setText("Drive 1"));
+        driveTabLayout.addTab(driveTabLayout.newTab().setText("Drive 2"));
+        driveTabLayout.addTab(driveTabLayout.newTab().setText("Drive 3"));
 
         DrivePageAdapter drivePageAdapter=new DrivePageAdapter(getFragmentManager(),driveTabLayout.getTabCount());
         driveViewPager.setAdapter(drivePageAdapter);
