@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.fragmenttask.Classes.AlbumData;
-import com.example.fragmenttask.DataAdapter.ArtistDataAdapter;
+import com.example.fragmenttask.Adapters.AlbumAdapter.ArtistDataAdapter;
 import com.example.fragmenttask.R;
 
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ public class AlbumTab1 extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         artistDataAdapter=new ArtistDataAdapter(albumData,getContext());
         recyclerView.setAdapter(artistDataAdapter);
-
+        recyclerView.setHasFixedSize(true);
         return view;
     }
 

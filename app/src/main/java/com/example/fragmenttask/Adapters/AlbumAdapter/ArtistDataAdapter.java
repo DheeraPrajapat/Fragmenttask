@@ -1,4 +1,4 @@
-package com.example.fragmenttask.DataAdapter;
+package com.example.fragmenttask.Adapters.AlbumAdapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -7,17 +7,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.fragmenttask.Classes.AlbumData;
 import com.example.fragmenttask.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -81,7 +81,26 @@ public class ArtistDataAdapter extends RecyclerView.Adapter<ArtistDataAdapter.Ar
             Log.v("IncreaseTest"," "+likerCount);
             Log.v("IncreaseTest"," "+albumData.get(position).getLikeCounter());
         });
-
+        holder.repostImage.setOnClickListener(v->
+        {
+            AlertDialog alertDialog=new AlertDialog.Builder(context).create();
+            View view=LayoutInflater.from(context).inflate(R.layout.repost_screen,null,false);
+            Button repostButton,cancelButton;
+            repostButton=view.findViewById(R.id.repostButton);
+            cancelButton=view.findViewById(R.id.repostCanelButton);
+            alertDialog.setView(view);
+            alertDialog.show();
+            alertDialog.setCancelable(false);
+            repostButton.setOnClickListener(view1 -> {
+                int repostCounter=Integer.parseInt(albumData.get(position).getRepostCounter());
+                holder.repost.setText(String.valueOf(repostCounter++));
+                albumData.get(position).setRepostCounter(String.valueOf(repostCounter));
+                alertDialog.dismiss();
+            });
+            cancelButton.setOnClickListener(view2->{
+                alertDialog.dismiss();
+            });
+        });
     }
 
     @Override
@@ -92,7 +111,7 @@ public class ArtistDataAdapter extends RecyclerView.Adapter<ArtistDataAdapter.Ar
     static class ArtistViewholder extends RecyclerView.ViewHolder
     {
         TextView name,type,address,like,member,repost,share,video,viewCounter;
-        ImageView imageView,likeImage;
+        ImageView imageView,likeImage,repostImage;
         ImageView shareData;
         public ArtistViewholder(@NonNull View itemView) {
             super(itemView);
@@ -107,6 +126,7 @@ public class ArtistDataAdapter extends RecyclerView.Adapter<ArtistDataAdapter.Ar
             viewCounter=itemView.findViewById(R.id.userViews);
             imageView=itemView.findViewById(R.id.userImage);
             likeImage=itemView.findViewById(R.id.likeImage);
+            repostImage=itemView.findViewById(R.id.repostImage);
             shareData=itemView.findViewById(R.id.shareDataButton);
         }
     }
