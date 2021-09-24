@@ -2,6 +2,8 @@ package com.example.fragmenttask.DataAdapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +56,31 @@ public class ArtistDataAdapter extends RecyclerView.Adapter<ArtistDataAdapter.Ar
         else{
             Glide.with(context).load(albumData.get(position).getImageUrl()).into(holder.imageView);
         }
+        String name=albumData.get(position).getArtistName();
+        String type=albumData.get(position).getArtistType();
+        String adress=albumData.get(position).getArtistAddress();
+        String imageUrl=albumData.get(position).getImageUrl();
+        holder.shareData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT,name);
+                intent.putExtra(Intent.EXTRA_TEXT,"Name :-"+name+"\n"+
+                        "Type :-"+type+"\n"+
+                        "Address :-"+adress+
+                        "Image :-"+imageUrl);
+                context.startActivity(Intent.createChooser(intent,"Share via"));
+            }
+        });
+        holder.likeImage.setOnClickListener(v->{
+            int likerCount=Integer.parseInt(albumData.get(position).getLikeCounter());
+
+            holder.like.setText(String.valueOf(likerCount++));
+            albumData.get(position).setLikeCounter(String.valueOf(likerCount));
+            Log.v("IncreaseTest"," "+likerCount);
+            Log.v("IncreaseTest"," "+albumData.get(position).getLikeCounter());
+        });
 
     }
 
@@ -65,7 +92,8 @@ public class ArtistDataAdapter extends RecyclerView.Adapter<ArtistDataAdapter.Ar
     static class ArtistViewholder extends RecyclerView.ViewHolder
     {
         TextView name,type,address,like,member,repost,share,video,viewCounter;
-        ImageView imageView;
+        ImageView imageView,likeImage;
+        ImageView shareData;
         public ArtistViewholder(@NonNull View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.userName);
@@ -78,6 +106,8 @@ public class ArtistDataAdapter extends RecyclerView.Adapter<ArtistDataAdapter.Ar
             video=itemView.findViewById(R.id.liveCounter);
             viewCounter=itemView.findViewById(R.id.userViews);
             imageView=itemView.findViewById(R.id.userImage);
+            likeImage=itemView.findViewById(R.id.likeImage);
+            shareData=itemView.findViewById(R.id.shareDataButton);
         }
     }
 }
