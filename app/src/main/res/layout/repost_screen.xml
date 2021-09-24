@@ -18,23 +18,23 @@
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
-   <Button
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:backgroundTint="@color/purple_500"
-       android:id="@+id/repostButton"
-       android:layout_marginStart="96dp"
-       android:layout_marginTop="50dp"
-       android:text="Repost"
-       android:layout_below="@id/repostHeading"
-       tools:ignore="HardcodedText" />
+    <Button
+        android:id="@+id/repostButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repostHeading"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Repost"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/purple_500"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="60dp"
         android:id="@+id/repostCanelButton"
         android:layout_marginStart="96dp"
         android:layout_marginTop="50dp"
