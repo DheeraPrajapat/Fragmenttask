@@ -27,6 +27,7 @@
         <entry key="app/src/main/res/layout/fragment_home_tab1.xml" value="0.1721014492753623" />
         <entry key="app/src/main/res/layout/fragment_home_tab2.xml" value="0.1721014492753623" />
         <entry key="app/src/main/res/layout/fragment_home_tab3.xml" value="0.1721014492753623" />
+        <entry key="app/src/main/res/layout/listview_item.xml" value="0.14" />
         <entry key="app/src/main/res/layout/recyclerViewItem.xml" value="0.12" />
         <entry key="app/src/main/res/layout/recyclerview_item.xml" value="0.18" />
         <entry key="app/src/main/res/layout/repost_screen.xml" value="0.1587719298245614" />
